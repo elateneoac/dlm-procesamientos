@@ -1,0 +1,1 @@
+Acá van todas las noticias que se van a procesar con el modelo.
