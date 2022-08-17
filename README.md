@@ -20,11 +20,11 @@ ___
 - '*libreria*': contiene todos los *modelos* que podemos procesar con las **noticias**. Y también contiene funciones *útiles* (que no son modelos).
 - '*noticias*': contiene todos los *archivos que tengan noticias* a procesar. Por ejemplo: los *dias* que bajemos del drive. El contenido de esta carpeta está vacio, cada unx tiene que llenarlo con las noticias que vaya a procesar.
 - '*resultados*': contiene los resultados de procesamiento. Una vez que corramos un modelo de la libreria, el resultado va a guardarse en esta carpeta. La sintaxis de los resultados generados son: "**\<nombre\>**\_**\<modelo\>**\_**\<fecha\>**.csv". Por ejemplo: el día *17/08/2022 a las 19:10:30* corremos el modelo '*topicos*' y le ponemos nombre '*naranja*', el archivo resultado de salida va a ser: "**naranja**\_**topicos**\_**202200817-191030**.csv".
-- '*ejemplos*': contiene ejemplos de cómo correr cada modelo.
+- '*ejemplos*': contiene ejemplos de cómo correr cada modelo + 1 ejemplo de archivo con noticias (*ejemplo_noticias.csv*, tiene 100 noticias)
 
  ### **Ejemplos**
 
-La carpeta '*ejemplos*' contiene scripts de ejemplo para usar los modelos. Se pueden copiar y pegar en la base del repo (al mismo nivel que las carpetas) y correr directamente
+La carpeta '*ejemplos*' contiene scripts de ejemplo para usar los modelos, y un ejemplo de archivo con noticia (*ejemplo_noticias.csv*). Se pueden copiar y pegar en la base del repo (al mismo nivel que las carpetas) y correr directamente
 
 ### **Cómo correr los scripts?**
 
