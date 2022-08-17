@@ -53,7 +53,7 @@ def procesar(noticias, topicos, etiqueta = ''):
     for topico_fecha, freq in contador_fecha.items():
         tabla_fecha += topico_fecha + ',' + str(freq) + '\n'
 
-    csv = open('../resultados/' + etiqueta + 'topicos-fecha_' + timestamp + '.csv', 'wt')
+    csv = open('./resultados/' + etiqueta + 'topicos-fecha_' + timestamp + '.csv', 'wt')
     csv.write(tabla_fecha)
     csv.close()
 
@@ -63,7 +63,7 @@ def procesar(noticias, topicos, etiqueta = ''):
     for topico_fecha_diario, freq in contador_fecha_diario.items():
         tabla_fecha_diario += topico_fecha_diario + ',' + str(freq) + '\n'
 
-    csv = open('../resultados/' + etiqueta + 'topicos-fecha-diario_' + timestamp + '.csv', 'wt')
+    csv = open('./resultados/' + etiqueta + 'topicos-fecha-diario_' + timestamp + '.csv', 'wt')
     csv.write(tabla_fecha_diario)
     csv.close()
 
@@ -73,6 +73,6 @@ def procesar(noticias, topicos, etiqueta = ''):
     for topico_fecha_diario_seccion, freq in contador_fecha_diario_seccion.items():
         tabla_fecha_diario_seccion += topico_fecha_diario_seccion + ',' + str(freq) + '\n'
 
-    csv = open('../resultados/' + etiqueta + 'topicos-fecha-diario-seccion_' + timestamp + '.csv', 'wt')
+    csv = open('./resultados/' + etiqueta + 'topicos-fecha-diario-seccion_' + timestamp + '.csv', 'wt')
     csv.write(tabla_fecha_diario_seccion)
     csv.close()
