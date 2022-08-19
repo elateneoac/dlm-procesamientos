@@ -131,3 +131,6 @@ dmypy.json
 # evitar subir noticias
 noticias
 resultados
+
+#archivo de mac
+.DS_Store
