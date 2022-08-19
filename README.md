@@ -1,4 +1,4 @@
-# Procesamiento de noticias para ***dlm***
+# Procesamiento de noticias para ***dlm*** v0.1
 
 Repo para **estandarizar** el procesamiento de noticias, **evitar errores** y **agilizar** el *proceso de producción*.
 
