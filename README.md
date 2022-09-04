@@ -9,7 +9,7 @@ ___
 *Básicamente*, la idea es seguir los siguientes pasos:
 
  1. **Bajar csvs** con noticias a procesar y guardarlos en '*noticias*'
- 2. **Armar script** en la carpeta base del repo (misma altura que las carpetas) que levante las noticias y prepare y corra algún modelo de la '*libreria*' **Crear carpeta** '*resultados*' a la misma altura que las demás carpetas antes de correr el script.
+ 2. **Armar script** en la carpeta base del repo (misma altura que las carpetas) que levante las noticias y prepare y corra algún modelo de la '*libreria*'. **Crear carpeta** '*resultados*' a la misma altura que las demás carpetas antes de correr el script.
  3. **Correr script**
  4. **Chequear resultados** generados en la carpeta '*resultados*'.
 
