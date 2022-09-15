@@ -1,6 +1,6 @@
 # procesamiento 'cfk-vs-larreta'
 
-from libreria import topicos, utiles
+from libreria import noticias, topicos
 
 lista_topicos = [
    {
@@ -13,5 +13,5 @@ lista_topicos = [
    },
 ]
 
-noticias = utiles.levantar_noticias()
-topicos.procesar(noticias, lista_topicos, 'cfk_vs_larreta')
+notis = noticias.levantar()
+topicos.procesar(notis, lista_topicos, 'cfk_vs_larreta')

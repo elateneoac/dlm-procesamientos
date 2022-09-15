@@ -1,6 +1,6 @@
 import os, csv, sys
 
-def levantar_noticias():
+def levantar(diarios=[], secciones=[], palabras_en_titulo=[], palabras_en_texto=[]):
     
     # aca los pasamos y los devolvemos
     archivos = [archivo for archivo in os.listdir ('./noticias') if archivo.endswith('.csv')]
@@ -16,6 +16,15 @@ def levantar_noticias():
         filas = csv.reader(f) # lo abro como un csv para poder iterarlo
 
         for diario, seccion, fecha, titulo, texto in filas:
+            # filtro los diarios y secciones que no queremos analizar
+            filtro_diario = len(diarios) and diario not in diarios
+            filtro_seccion = len(secciones) and seccion not in secciones
+            filtro_texto = len(palabras_en_texto) and not any(palabra in texto for palabra in palabras_en_texto)
+            filtro_titulo = len(palabras_en_titulo) and not any(palabra in titulo for palabra in palabras_en_titulo)
+            
+            if filtro_diario or filtro_seccion or filtro_texto or filtro_titulo:
+                continue
+
             noticias.append( (diario, seccion, fecha, titulo, texto) )
 
     return noticias
