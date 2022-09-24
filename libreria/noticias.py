@@ -12,7 +12,7 @@ def levantar(diarios=[], secciones=[], palabras_en_titulo=[], palabras_en_texto=
     noticias = []
 
     for archivo in archivos:
-        f = open('.' + barra + 'noticias' + barra + archivo, 'rt')
+        f = open('.' + barra + 'noticias' + barra + archivo, 'rt', encoding="utf-8")
         f.readline() # leo y descarto la primer fila que solo tiene la info de columnas.
 
         csv.field_size_limit(sys.maxsize) # config para que lea todo el contenido de la fila

@@ -47,6 +47,6 @@ def procesar(noticias, topicos, titulos=False, diarios=[], secciones=[], id = ''
     for clave, freq in contador.items():
         tabla_fecha_diario_seccion += clave + ',' + str(freq) + '\n'
 
-    csv = open('.' + barra + 'resultados' + barra + id + 'topicos-fecha-diario-seccion_' + timestamp + '.csv', 'wt')
+    csv = open('.' + barra + 'resultados' + barra + id + 'topicos-fecha-diario-seccion_' + timestamp + '.csv', 'wt', encoding="utf-8")
     csv.write(tabla_fecha_diario_seccion)
     csv.close()
