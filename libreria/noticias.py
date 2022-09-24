@@ -15,7 +15,8 @@ def levantar(diarios=[], secciones=[], palabras_en_titulo=[], palabras_en_texto=
         f = open('.' + barra + 'noticias' + barra + archivo, 'rt', encoding="utf-8")
         f.readline() # leo y descarto la primer fila que solo tiene la info de columnas.
 
-        csv.field_size_limit(sys.maxsize) # config para que lea todo el contenido de la fila
+        # csv.field_size_limit(sys.maxsize) # config para que lea todo el contenido de la fila
+        csv.field_size_limit(1310720000) # config para que lea todo el contenido de la fila
 
         filas = csv.reader(f) # lo abro como un csv para poder iterarlo
 
