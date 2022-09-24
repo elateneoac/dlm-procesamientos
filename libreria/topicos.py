@@ -1,7 +1,11 @@
-import datetime
+import datetime, platform
 
 def procesar(noticias, topicos, titulos=False, diarios=[], secciones=[], id = ''):
     contador = {}
+
+    barra = '\\'
+    if platform.system() == 'Linux':
+        barra = '/'
 
     # itero cada una de las noticias (es decir, cada fila del csv)
     for diario, seccion, fecha, titulo, texto in noticias:
@@ -43,6 +47,6 @@ def procesar(noticias, topicos, titulos=False, diarios=[], secciones=[], id = ''
     for clave, freq in contador.items():
         tabla_fecha_diario_seccion += clave + ',' + str(freq) + '\n'
 
-    csv = open('./resultados/' + id + 'topicos-fecha-diario-seccion_' + timestamp + '.csv', 'wt')
+    csv = open('.' + barra + 'resultados' + barra + id + 'topicos-fecha-diario-seccion_' + timestamp + '.csv', 'wt')
     csv.write(tabla_fecha_diario_seccion)
     csv.close()
