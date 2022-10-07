@@ -39,7 +39,7 @@ def procesar(noticias, topicos, titulos=False, diarios=[], secciones=[], id = ''
         id += '_'
 
     # me quedo con el timestamp
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M%S")
 
     # por fecha, diario y seccion
     tabla_fecha_diario_seccion = 'topico,fecha,diario,seccion,freq\n'
