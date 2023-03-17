@@ -1,6 +1,4 @@
-# procesamiento 'cfk-vs-larreta'
-
-from libreria import noticias, topicos
+from libreria import noticias, cercanos
 
 lista_topicos = [
    {
@@ -26,10 +24,12 @@ mapas = {
     }
 }
 
-notis = noticias.levantar()
-topicos.procesar(
-    noticias=notis,
-    topicos=lista_topicos, 
-    mapas=mapas,
-    id='cfk_vs_larreta'
+cfk = ['cfk', 'cristina fernández', 'cristina fernández de kirchner']
+notis = noticias.levantar(diarios=['clarin'], secciones=['politica'])
+
+cercanos.procesar(
+   concepto=cfk,
+   noticias=notis,
+   top=50,
+   mapas=mapas
 )
