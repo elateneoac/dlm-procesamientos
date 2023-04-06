@@ -43,7 +43,7 @@ def procesar(concepto, noticias, titulos=False, diarios=[], secciones=[], mapas=
                 if t.pos_ is 'ADJ':
                     k = termino + ',' + fecha[:10] + ',' + diario + ',' + seccion + ',' + 'adjetivo'
                 if t.pos_ is 'VERB':
-                    k = termino + ',' + fecha[:10] + ',' + diario + ',' + seccion + ',' + 'verba'
+                    k = termino + ',' + fecha[:10] + ',' + diario + ',' + seccion + ',' + 'verbo'
 
                 if k not in contador:
                     contador[k] = 0
