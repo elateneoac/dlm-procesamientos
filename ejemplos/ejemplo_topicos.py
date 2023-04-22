@@ -22,7 +22,9 @@ mapas = {
       'todonoticias' : 'TN',
       'ambito' : 'Ámbito',
       'paginadoce' : 'Página 12',
-      'perfil' : 'Perfil'
+      'perfil' : 'Perfil',
+      'casarosada' : 'Casa Rosada',
+      'diariodeleuco' : 'Diario de Lueco'
     }
 }
 
