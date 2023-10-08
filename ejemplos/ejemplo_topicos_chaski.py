@@ -29,14 +29,14 @@ token='token que llegó por mail'
 c = Chaski(usuario, token)
 
 query = {
-    'desde':'20231005',
-    'hasta':'20231007', # para buscar por horario: '20231007-21:30:00'
-    # 'medios' : ['clarin-lanacion'],
-    # 'secciones' : ['politica-economia'],
-    # 'todos':['milei','massa'],
-    # 'alguno':['bullrich'],
-    # 'ninguno':['larreta'],
-    # 'textual':'frase textual a buscar en titulos o textos',
+    'desde':'20231005', # noticias DESDE esta fecha (se puede especificar horario: 20231005-10:30:00)
+    'hasta':'20231007', # noticias HASTA esta fecha (se puede especificar horario: 20231007-21:30:00)
+    # 'medios' : ['clarin-lanacion'], # diarios a filtrar
+    # 'secciones' : ['politica-economia'], # secciones a filtrar
+    # 'todos':['milei','massa'], # noticias que contengan TODOS estos términos
+    # 'alguno':['bullrich'], # noticias que contengan ALGUNO estos términos
+    # 'ninguno':['larreta'], # noticias que NO contengan NINGUNO de estos términos
+    # 'textual':'frase textual a buscar en titulos o textos', # noticias que contengan EXACTAMENTE ESTA FRASE
     # 'en_titulo':True, # busco en titulos
     # 'en_texto':True, # busco en textos
 }
