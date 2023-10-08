@@ -9,6 +9,9 @@ class Chaski:
         self.url = 'https://chaski.com.ar/noticias/'
 
     def noticias(self, query):
+        """
+        Recupero noticias que matcheen con la 'query'.
+        """
         endpoint = self.__armarendpoint__(query)
         r = requests.get(endpoint, headers=self.credenciales)
         rta = r.json()
@@ -25,6 +28,9 @@ class Chaski:
         return notis
 
     def prepros(self, query):
+        """
+        Recupero preprocesamientos de noticias que matcheen con la 'query'.
+        """
         endpoint = self.__armarendpoint__(query, 'prepro')
         r = requests.get(endpoint, headers=self.credenciales)
         rta = r.json()
@@ -41,6 +47,9 @@ class Chaski:
         return prepros
 
     def contar(self, query):
+        """
+        Cuento la cantida de noticias que matcheen con la 'query'.
+        """
         endpoint = self.__armarendpoint__(query, 'contar')
         r = requests.get(endpoint, headers=self.credenciales)
         rta = r.json()
