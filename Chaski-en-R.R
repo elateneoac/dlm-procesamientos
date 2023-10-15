@@ -8,12 +8,12 @@ library(jsonlite)
 usuario ="joaquin.lovizio@gmail.com"
 token = "09876"
 
-# Creamos una función para hacer la consulta con parámetros opcionales
+# Armo funcion
 query_noticias <- function(desde, hasta, medios, secciones, todos, alguno, ninguno, textual) {
   h <- new_handle()
   handle_setheaders(h, usuario = usuario, token = token)
   
-  # Construimos la URL con base en los parámetros
+  # Construimos la URL con base a los parámetros de mas abajo
   url <- paste0("https://chaski.com.ar/noticias/",
                 desde, "/",
                 hasta, "/",
