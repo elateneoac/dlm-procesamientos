@@ -8,7 +8,7 @@ setwd(getwd())
 #defino los csv
 archivos <- list.files(path = "./noticias", pattern = "csv")
 
-#creo un df vacío
+#creo un df vac?o
 base<-data.frame()
 
 #levanto todas las noticias en un solo df
