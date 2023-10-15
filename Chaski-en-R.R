@@ -61,3 +61,7 @@ textual <- NULL  #noticias que contengan EXACTAMENTE estos términos
 
 # Corremos la función
 notis <- query_noticias(desde, hasta, medios, secciones, todos, alguno, ninguno, textual)
+
+### Guardo en un csv
+
+write.csv(notis,paste("noticias/notis",desde,hasta,".csv",sep = "-"), row.names = FALSE)
