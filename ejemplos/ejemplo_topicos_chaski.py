@@ -29,8 +29,8 @@ token='token que llegó por mail'
 c = Chaski(usuario, token)
 
 query = {
-    'desde':'20231005', # noticias DESDE esta fecha (se puede especificar horario: 20231005-10:30:00)
-    'hasta':'20231007', # noticias HASTA esta fecha (se puede especificar horario: 20231007-21:30:00)
+    'desde':'20231003', # noticias DESDE esta fecha (se puede especificar horario: 20231005-10:30:00)
+    'hasta':'20231010', # noticias HASTA esta fecha (se puede especificar horario: 20231007-21:30:00)
     # 'medios' : ['clarin-lanacion'], # diarios a filtrar
     # 'secciones' : ['politica-economia'], # secciones a filtrar
     # 'todos':['milei','massa'], # noticias que contengan TODOS estos términos
