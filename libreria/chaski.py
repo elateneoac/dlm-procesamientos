@@ -8,12 +8,12 @@ class Chaski:
         }
         self.url = 'https://chaski.com.ar/noticias/'
 
-    def noticias(self, query):
+    def noticias(self, query, path=''):
         """
         Recupero noticias que matcheen con la 'query'.
         """
         endpoint = self.__armarendpoint__(query)
-        r = requests.get(endpoint, headers=self.credenciales)
+        r = requests.get(endpoint, headers=self.credenciales,)
         rta = r.json()
         if 'error' in rta:
             print(rta)
@@ -22,6 +22,16 @@ class Chaski:
         notis = []
         for n in rta['noticias']:
             notis.append( (n['Medio'], n['Seccion'], n['Fecha'], n['Titulo'], n['Texto']) )
+
+        if len(path):
+
+            tabla = 'diario,seccion,fecha,titulo,texto\n'
+            for n in rta['noticias']:
+                tabla += '{},{},{},"{}","{}"\n'.format(n['Medio'], n['Seccion'], n['Fecha'], n['Titulo'].replace('"',''), n['Texto'].replace('"',''))
+
+            csv = open(path, 'wt', encoding="utf-8")
+            csv.write(tabla)
+            csv.close()
 
         time.sleep(1.5)
 
